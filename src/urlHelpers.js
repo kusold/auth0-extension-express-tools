@@ -81,6 +81,8 @@ module.exports.getWebtaskUrl = function(req) {
       webtaskUrl = webtaskUrl.replace('https://sandbox-eu.it.auth0.com/api/run/' + req.x_wt.container + '/', 'https://' + req.x_wt.container + '.eu.webtask.io/');
     } else if (webtaskUrl.indexOf('https://sandbox-au.it.auth0.com') === 0) {
       webtaskUrl = webtaskUrl.replace('https://sandbox-au.it.auth0.com/api/run/' + req.x_wt.container + '/', 'https://' + req.x_wt.container + '.au.webtask.io/');
+    } else if (webtaskUrl.indexOf('https://us-test.wt.auth0.net') === 0) {
+      webtaskUrl = webtaskUrl.replace('https://us-test.wt.auth0.net/api/run/' + req.x_wt.container + '/', 'https://' + req.x_wt.container + '.us.webtask.io/');
     }
   }
 
